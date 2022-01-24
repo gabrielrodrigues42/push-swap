@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 01:33:41 by gandrade          #+#    #+#              #
-#    Updated: 2021/12/29 12:54:24 by gandrade         ###   ########.fr        #
+#    Updated: 2022/01/24 16:30:19 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ OBJ_DIR = ./obj
 
 SRC_FILES = ft_atof.c \
             ft_atoi.c \
+            ft_atol.c \
             ft_bzero.c \
             ft_calloc.c \
             ft_htoa.c \
@@ -36,6 +37,7 @@ SRC_FILES = ft_atof.c \
             ft_isascii.c \
             ft_isdigit.c \
             ft_isprint.c \
+            ft_issign.c \
             ft_isspace.c \
             ft_itoa.c \
             ft_lst2c_add_back.c \

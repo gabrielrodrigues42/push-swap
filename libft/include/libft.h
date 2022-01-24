@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 01:33:39 by gandrade          #+#    #+#             */
-/*   Updated: 2021/12/29 12:55:11 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/01/24 16:29:52 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ typedef struct s_list
 
 typedef struct s_lst2c
 {
-	void			*data;
+	int				*data;
 	struct s_lst2c	*next;
 	struct s_lst2c	*prev;
 }	t_lst2c;
@@ -93,6 +93,7 @@ int		ft_isprint(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_isspace(int c);
+int		ft_issign(int c);
 
 /*
 ** To Functions
@@ -101,6 +102,7 @@ int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 double	ft_atof(const char *str);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int n);

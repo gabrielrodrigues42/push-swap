@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 21:55:18 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/24 16:29:22 by gandrade         ###   ########.fr       */
+/*   Created: 2022/01/19 16:01:27 by gandrade          #+#    #+#             */
+/*   Updated: 2022/01/19 16:02:26 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_issign(int c)
 {
-	int	res;
-	int	sign;
-
-	res = 0;
-	sign = 1;
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-		str++;
-	if (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			sign = -1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		res = (res * 10) + (*str - '0');
-		str++;
-	}
-	return (res * sign);
+	if (c == '-' || c == '+')
+		return (1);
+	return (0);
 }

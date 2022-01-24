@@ -6,14 +6,14 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/12 21:06:44 by gandrade          #+#    #+#              #
-#    Updated: 2021/12/12 22:41:33 by gandrade         ###   ########.fr        #
+#    Updated: 2022/01/24 16:32:22 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS =
 
 RM = rm -rf
 MKDIR = mkdir -p
@@ -29,6 +29,8 @@ SRC_DIR = ./src
 OBJ_DIR = ./obj
 
 SRC_FILES = main.c \
+            parse_args.c \
+            input_validators.c \
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ = $(subst $(SRC_DIR), $(OBJ_DIR), $(SRC:.c=.o))

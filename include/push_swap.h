@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 21:06:50 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/24 16:31:04 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:56:57 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_stacks
 	t_lst2c	*b;
 }	t_stacks;
 
-int	parse_args(int argc, char **argv);
-int	input_is_valid(char **args);
+char	**parse_args(int argc, char **argv);
+int		input_is_valid(char **args);
 
 #endif

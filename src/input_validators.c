@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:27:54 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/24 19:22:48 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:15:57 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@ static int	input_has_valid_position(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]) \
+		if ((!ft_isdigit(str[i]) \
 			&& (!ft_issign(str[i]) || !ft_isdigit(str[i + 1])) \
-			&& (!ft_isdigit(str[i]) || !ft_issign(str[i + 1])) \
+			&& (!ft_isdigit(str[i]) || !ft_issign(str[i + 1]))) \
 			|| (i > 0 && (ft_issign(str[i]) && ft_isdigit(str[i - 1]))))
 			return (0);
 		i++;

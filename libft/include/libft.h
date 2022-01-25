@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 01:33:39 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/24 16:29:52 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:41:58 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ typedef struct s_list
 
 typedef struct s_lst2c
 {
-	int				*data;
+	void			*data;
 	struct s_lst2c	*next;
 	struct s_lst2c	*prev;
 }	t_lst2c;

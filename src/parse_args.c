@@ -6,33 +6,25 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:26:10 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/24 18:54:51 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:59:16 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h> // REMOVE
 
 static char	**get_args(int argc, char **argv);
 static char	**get_args_aux(int splits, int argc, char **argv);
 static int	need_split(char *str);
 
-int	parse_args(int argc, char **argv)
+char	**parse_args(int argc, char **argv)
 {
 	char	**args;
-	int		i;
 
 	args = get_args(argc, argv);
-	i = 0;
-	while (args[i])
-		printf("%s\n", args[i++]);
 	if (input_is_valid(args))
-	{
-		ft_strclear2(args);
-		return (1);
-	}
+		return (args);
 	ft_strclear2(args);
-	return (0);
+	return (NULL);
 }
 
 static char	**get_args(int argc, char **argv)

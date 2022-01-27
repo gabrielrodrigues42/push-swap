@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 01:33:39 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/25 18:41:58 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/01/26 21:59:19 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ typedef struct s_list
 
 typedef struct s_lst2c
 {
-	void			*data;
+	int				data;
 	struct s_lst2c	*next;
 	struct s_lst2c	*prev;
 }	t_lst2c;
@@ -171,7 +171,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ** Doubly Circular Linked List
 */
 
-t_lst2c	*ft_lst2c_new(void *data);
+t_lst2c	*ft_lst2c_new(int data);
 t_lst2c	*ft_lst2c_last(t_lst2c *head);
 int		ft_lst2c_size(t_lst2c *head);
 void	ft_lst2c_add_front(t_lst2c **head, t_lst2c *new_node);

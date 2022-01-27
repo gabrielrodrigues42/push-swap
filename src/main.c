@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 21:07:07 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/26 22:04:32 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/01/27 19:34:14 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void	load_values_to_stack_a(char **args, t_stacks *stack)
 	int	data;
 	int	i;
 
+	stack->a = 0;
 	i = 0;
 	while (args[i])
 	{
@@ -40,6 +41,7 @@ static void	load_values_to_stack_a(char **args, t_stacks *stack)
 	}
 	print_list(stack->a);
 	ft_lst2c_clear(&stack->a);
+	ft_strclear2(args);
 }
 
 int	main(int argc, char **argv)
@@ -53,6 +55,5 @@ int	main(int argc, char **argv)
 	if (!args)
 		exit(1);
 	load_values_to_stack_a(args, &stack);
-	ft_strclear2(args);
 	return (0);
 }

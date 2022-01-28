@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/12 21:06:44 by gandrade          #+#    #+#              #
-#    Updated: 2022/01/26 22:03:57 by gandrade         ###   ########.fr        #
+#    Updated: 2022/01/28 20:36:20 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
-MKDIR = mkdir -p
+MKDIR = mkdir -p $(@D)
 
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -27,16 +27,19 @@ INCLUDE = $(addprefix -I, $(INCLUDE_DIR))
 
 SRC_DIR = ./src
 OBJ_DIR = ./obj
+PARSE_DIR = parse
 
 SRC_FILES = main.c \
-            parse_args.c \
-            input_validators.c \
+            $(PARSE)
 
-SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
-OBJ = $(subst $(SRC_DIR), $(OBJ_DIR), $(SRC:.c=.o))
+PARSE_FILES = parse_args.c \
+              input_validations.c \
+
+PARSE = $(addprefix $(PARSE_DIR)/, $(PARSE_FILES))
+OBJ = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(MKDIR) $(OBJ_DIR)
+	$(MKDIR)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(NAME): $(LIBFT) $(OBJ)

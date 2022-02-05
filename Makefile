@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/12 21:06:44 by gandrade          #+#    #+#              #
-#    Updated: 2022/01/28 20:36:20 by gandrade         ###   ########.fr        #
+#    Updated: 2022/02/05 15:52:32 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,14 +28,22 @@ INCLUDE = $(addprefix -I, $(INCLUDE_DIR))
 SRC_DIR = ./src
 OBJ_DIR = ./obj
 PARSE_DIR = parse
+MOVES_DIR = moves
 
 SRC_FILES = main.c \
-            $(PARSE)
+            $(PARSE) \
+			$(MOVES) \
 
 PARSE_FILES = parse_args.c \
               input_validations.c \
 
+MOVES_FILES = push.c \
+              swap.c \
+              rotate.c \
+              reverse_rotate.c \
+
 PARSE = $(addprefix $(PARSE_DIR)/, $(PARSE_FILES))
+MOVES = $(addprefix $(MOVES_DIR)/, $(MOVES_FILES))
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c

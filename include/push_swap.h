@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 21:06:50 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/25 18:56:57 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/02/05 15:52:05 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,9 @@ typedef struct s_stacks
 
 char	**parse_args(int argc, char **argv);
 int		input_is_valid(char **args);
+void	push(t_stacks *stack, char name);
+void	swap(t_stacks *stack, char name);
+void	rotate(t_stacks *stack, char name);
+void	reverse_rotate(t_stacks *stack, char name);
 
 #endif

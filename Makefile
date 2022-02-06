@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/12 21:06:44 by gandrade          #+#    #+#              #
-#    Updated: 2022/02/06 13:29:53 by gandrade         ###   ########.fr        #
+#    Updated: 2022/02/06 13:36:22 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC_FILES = main.c \
             clear_exit.c \
             load_stack.c \
             $(PARSE) \
-			$(MOVES) \
+            $(MOVES) \
 
 PARSE_FILES = parse_args.c \
               input_validations.c \

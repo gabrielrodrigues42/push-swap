@@ -6,14 +6,14 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/12 21:06:44 by gandrade          #+#    #+#              #
-#    Updated: 2022/02/05 15:52:32 by gandrade         ###   ########.fr        #
+#    Updated: 2022/02/06 13:29:53 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS =
 
 RM = rm -rf
 MKDIR = mkdir -p $(@D)
@@ -31,6 +31,9 @@ PARSE_DIR = parse
 MOVES_DIR = moves
 
 SRC_FILES = main.c \
+            check_sort_cases.c \
+            clear_exit.c \
+            load_stack.c \
             $(PARSE) \
 			$(MOVES) \
 

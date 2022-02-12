@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 01:33:39 by gandrade          #+#    #+#             */
-/*   Updated: 2022/01/26 21:59:19 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/02/11 21:05:12 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,6 +173,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 t_lst2c	*ft_lst2c_new(int data);
 t_lst2c	*ft_lst2c_last(t_lst2c *head);
+t_lst2c	*ft_lst2c_pop_node(t_lst2c **head, t_lst2c *node);
 int		ft_lst2c_size(t_lst2c *head);
 void	ft_lst2c_add_front(t_lst2c **head, t_lst2c *new_node);
 void	ft_lst2c_add_back(t_lst2c **head, t_lst2c *new_node);

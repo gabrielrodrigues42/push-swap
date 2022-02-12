@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 01:33:41 by gandrade          #+#    #+#              #
-#    Updated: 2022/01/24 16:30:19 by gandrade         ###   ########.fr        #
+#    Updated: 2022/02/11 21:05:23 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC_FILES = ft_atof.c \
             ft_lst2c_clear.c \
             ft_lst2c_last.c \
             ft_lst2c_new.c \
+            ft_lst2c_pop_node.c \
             ft_lst2c_size.c \
             ft_lstadd_back.c \
             ft_lstadd_front.c \

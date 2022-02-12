@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 15:39:38 by gandrade          #+#    #+#             */
-/*   Updated: 2022/02/11 22:14:29 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/02/12 12:24:04 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ static void	swap_move(t_lst2c **head)
 {
 	if (!*head || *head == (*head)->next)
 		return ;
-	ft_lst2c_add_front(head, ft_lst2c_pop_node(head, (*head)->next));
+	else if (*head == (*head)->next->next)
+		*head = (*head)->next;
+	else
+		ft_lst2c_add_front(head, ft_lst2c_pop_node(head, (*head)->next));
 }
 
 void	swap(t_stacks *stack, char name)

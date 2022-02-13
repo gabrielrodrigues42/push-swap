@@ -6,14 +6,13 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 13:23:42 by gandrade          #+#    #+#             */
-/*   Updated: 2022/02/12 23:07:21 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/02/13 19:33:42 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static int	stack_is_sorted(t_lst2c *head);
-static int	stack_is_rev_sorted(t_lst2c *head);
 static void	sort_two(t_stacks *stack);
 
 void	check_sort_cases(t_stacks *stack)
@@ -35,21 +34,6 @@ static int	stack_is_sorted(t_lst2c *head)
 	while (temp->next != head)
 	{
 		if (temp->data < temp->next->data)
-			temp = temp->next;
-		else
-			return (0);
-	}
-	return (1);
-}
-
-static int	stack_is_rev_sorted(t_lst2c *head)
-{
-	t_lst2c	*temp;
-
-	temp = head;
-	while (temp->next != head)
-	{
-		if (temp->data > temp->next->data)
 			temp = temp->next;
 		else
 			return (0);

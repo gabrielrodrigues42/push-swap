@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 22:38:51 by gandrade          #+#    #+#             */
-/*   Updated: 2021/12/29 10:48:51 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/02/12 23:03:45 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 int	ft_lst2c_size(t_lst2c *head)
 {
-	int	len;
+	t_lst2c	*temp;
+	int		size;
 
-	len = 0;
-	head->prev->next = NULL;
-	while (head)
+	size = 0;
+	temp = head;
+	while (temp->next != head)
 	{
-		head = head->next;
-		len++;
+		temp = temp->next;
+		size++;
 	}
-	return (len);
+	size++;
+	return (size);
 }

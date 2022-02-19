@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 13:23:42 by gandrade          #+#    #+#             */
-/*   Updated: 2022/02/13 19:33:42 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/02/19 17:56:19 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 static int	stack_is_sorted(t_lst2c *head);
 static void	sort_two(t_stacks *stack);
+static void	sort_three(t_stacks *stack);
 
 void	check_sort_cases(t_stacks *stack)
 {
-	int	size = ft_lst2c_size(stack->a);
+	int	size;
+
+	size = ft_lst2c_size(stack->a);
 	if (size == 1 || stack_is_sorted(stack->a))
 		return ;
 	else if (size == 2)
 		sort_two(stack);
+	else if (size == 3)
+		sort_three(stack);
 	else
 		return ;
 }
@@ -45,4 +50,31 @@ static void	sort_two(t_stacks *stack)
 {
 	if (stack->a->data > stack->a->next->data)
 		swap(stack, 'a');
+}
+
+static void	sort_three(t_stacks *stack)
+{
+	int	first;
+	int	second;
+	int	third;
+
+	first = stack->a->data;
+	second = stack->a->next->data;
+	third = stack->a->next->next->data;
+	if (first < second && second > third && first < third)
+	{
+		swap(stack, 'a');
+		rotate(stack, 'a');
+	}
+	else if (first > second && second < third && first < third)
+		swap(stack, 'a');
+	else if (first < second && second > third && first > third)
+		reverse_rotate(stack, 'a');
+	else if (first > second && second < third && first > third)
+		rotate(stack, 'a');
+	else
+	{
+		swap(stack, 'a');
+		reverse_rotate(stack, 'a');
+	}
 }

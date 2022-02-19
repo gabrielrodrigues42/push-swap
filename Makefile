@@ -6,14 +6,14 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/12 21:06:44 by gandrade          #+#    #+#              #
-#    Updated: 2022/02/06 13:36:22 by gandrade         ###   ########.fr        #
+#    Updated: 2022/02/19 17:55:45 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 CC = gcc
-CFLAGS =
+CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 MKDIR = mkdir -p $(@D)

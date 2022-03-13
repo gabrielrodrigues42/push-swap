@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/12 21:06:44 by gandrade          #+#    #+#              #
-#    Updated: 2022/02/19 17:55:45 by gandrade         ###   ########.fr        #
+#    Updated: 2022/03/13 15:41:02 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,8 @@ SRC_FILES = main.c \
             check_sort_cases.c \
             clear_exit.c \
             load_stack.c \
+            sort_five.c \
+            sort_three.c \
             $(PARSE) \
             $(MOVES) \
 

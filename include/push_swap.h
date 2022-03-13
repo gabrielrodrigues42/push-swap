@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 21:06:50 by gandrade          #+#    #+#             */
-/*   Updated: 2022/02/06 13:28:17 by gandrade         ###   ########.fr       */
+/*   Updated: 2022/03/13 15:39:58 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int		input_is_valid(char **args);
 void	check_sort_cases(t_stacks *stack);
 void	load_values_to_stack_a(char **args, t_stacks *stack);
 void	clear_exit(t_stacks *stack, int code);
+void	sort_three(t_stacks *stack);
+void	sort_five(t_stacks *stack);
 
 #endif
